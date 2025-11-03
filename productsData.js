@@ -94,6 +94,17 @@ const rawApiData = [
   //TODO Map => transform object shape to { name : "Name"}
 
   
+//Step-1 [Filter]
+// const topElectronicProducts= rawApiData.filter(
+//     (item)=> item.category === "Electronics"
+// );
 
+//step-2 [Sort]
+
+const topElectronicProducts= rawApiData.filter(
+    (item)=> item.category === "Electronics"
+).sort((a,b)=> b.rating -a.rating);
+
+console.log(topElectronicProducts);
 
 
