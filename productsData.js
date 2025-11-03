@@ -101,10 +101,18 @@ const rawApiData = [
 
 //step-2 [Sort]
 
+/*
 const topElectronicProducts= rawApiData.filter(
     (item)=> item.category === "Electronics"
-).sort((a,b)=> b.rating -a.rating);
+).sort((a,b)=> b.rating -a.rating).slice(0,3).map(item => {
+    return {name:item.productName}
+});
 
 console.log(topElectronicProducts);
+*/
 
 
+const topElectronicsProducts=rawApiData.filter((item)=>item.category==="Electronics").sort((a,b)=>b.rating - a.rating).slice(0,2).map((item)=>{
+    return {name: item.productName}
+});
+console.log(topElectronicsProducts)
